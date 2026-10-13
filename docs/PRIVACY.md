@@ -1,6 +1,6 @@
 # 데이터와 실행 범위
 
-이 저장소는 코드, 공통 업무 지침, 회사 Hub 구조만 포함합니다. 실제 메일·Webex 대화·프로젝트 본문·통화기록·개인 API 키는 포함하지 않습니다. 회사 Hub 구조가 있어 비공개 배포를 전제로 합니다.
+이 저장소는 코드, 공통 업무 지침, 회사 Hub 구조만 포함합니다. 실제 메일·Webex 대화·프로젝트 본문·통화기록·개인 API 키는 포함하지 않습니다. 사용자의 요청에 따라 공개 배포합니다. 공개 범위에는 코드·공통 업무 지침·회사 Hub의 DB 구조와 페이지/DB 식별자가 포함됩니다. 해당 식별자는 인증정보가 아니며 실제 Notion 페이지와 업무 내용은 Notion의 접근 권한으로 보호됩니다.
 
 각 사용자의 Zimbra 자격증명, Webex Client Secret 및 OAuth token은 그 Mac의 Keychain 서비스 `jvm-work-assistant.v1` 아래 저장합니다. 승인한 대화방의 ID/이름은 `~/Library/Application Support/JvMWorkAssistant/settings.json`에 사용자 권한으로 저장합니다. 원본 메일과 채팅 캐시는 생성하지 않습니다. 기존 JvMBridge/WebexCollector/JvMAEWorker와 별개입니다.
 
