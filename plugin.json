@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "jvm-work-assistant",
+  "version": "0.1.0",
+  "description": "JvM company workflow with local read-only Zimbra and Webex tools and shared Notion Hub guidance.",
+  "author": {"name": "JvM team"},
+  "extensions": {"com.openai": {"interface": {
+    "displayName": "JvM 업무 도우미",
+    "shortDescription": "회사 메일·대화와 Notion 업무 정리",
+    "longDescription": "각자의 Mac에서 회사 메일과 허용한 Webex 방을 읽고 공식 Notion 연결로 팀 Hub 업무를 정리합니다. 계정 연결은 별도 설정이 필요합니다.",
+    "developerName": "JvM team",
+    "category": "Productivity",
+    "capabilities": ["Interactive"],
+    "defaultPrompt": "JvM 업무 도우미 연결 상태를 확인하고 오늘 요청한 업무를 도와줘."
+  }}}
+}

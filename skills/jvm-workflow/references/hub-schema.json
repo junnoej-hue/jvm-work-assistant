@@ -1,0 +1,537 @@
+{
+  "hub_page_id": "b2c35e9c-b9ee-83e1-82c1-018feed05f4b",
+  "verified_date": "2026-10-13",
+  "verification": "read_and_schema_only",
+  "sources": {
+    "Team": {
+      "default_page_template": "https://app.notion.com/p/08535e9cb9ee830993790177c674eb88",
+      "icon": "/icons/people_gray.svg",
+      "name": "Team",
+      "schema": {
+        "Notion 계정": {
+          "description": "",
+          "name": "Notion 계정",
+          "type": "person"
+        },
+        "Projects": {
+          "dataSourceUrl": "collection://b5635e9c-b9ee-822c-80d0-87b539f38970",
+          "description": "",
+          "name": "Projects",
+          "propertyUrl": "collectionProperty://b5635e9c-b9ee-822c-80d0-87b539f38970/V1tUfg",
+          "type": "relation"
+        },
+        "Tasks": {
+          "dataSourceUrl": "collection://55035e9c-b9ee-83bb-ae32-0796907899a3",
+          "description": "",
+          "name": "Tasks",
+          "propertyUrl": "collectionProperty://55035e9c-b9ee-83bb-ae32-0796907899a3/QENjTQ",
+          "type": "relation"
+        },
+        "담당 Clients": {
+          "dataSourceUrl": "collection://a3435e9c-b9ee-834f-acf9-07799e03fe65",
+          "description": "",
+          "name": "담당 Clients",
+          "propertyUrl": "collectionProperty://a3435e9c-b9ee-834f-acf9-07799e03fe65/YUpCTA",
+          "type": "relation"
+        },
+        "상태": {
+          "description": "",
+          "name": "상태",
+          "options": [
+            {
+              "color": "green",
+              "description": "",
+              "name": "활동",
+              "url": "collectionPropertyOption://60235e9c-b9ee-824a-91d8-87a5c5615418/P2JWWg/ZTg3ZTg2YWQtNDA5Zi00YmVhLTg4ZjEtMzIyY2NhZTEzYTJl"
+            },
+            {
+              "color": "gray",
+              "description": "",
+              "name": "비활동",
+              "url": "collectionPropertyOption://60235e9c-b9ee-824a-91d8-87a5c5615418/P2JWWg/YzQ5NzdkNDktYzU5Yy00NDVlLWFmYTktOWRjZTcxNjEwMGJl"
+            }
+          ],
+          "type": "select"
+        },
+        "역할": {
+          "description": "",
+          "name": "역할",
+          "type": "text"
+        },
+        "이름": {
+          "description": "",
+          "name": "이름",
+          "type": "title"
+        }
+      },
+      "url": "collection://60235e9c-b9ee-824a-91d8-87a5c5615418"
+    },
+    "Clients": {
+      "default_page_template": "https://app.notion.com/p/7fe35e9cb9ee83009d4c01bab8ada02b",
+      "icon": "/icons/briefcase_gray.svg",
+      "name": "Clients",
+      "schema": {
+        "Client": {
+          "description": "",
+          "name": "Client",
+          "type": "title"
+        },
+        "Notes": {
+          "dataSourceUrl": "collection://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18",
+          "description": "",
+          "name": "Notes",
+          "propertyUrl": "collectionProperty://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18/aX16aw",
+          "type": "relation"
+        },
+        "Projects": {
+          "dataSourceUrl": "collection://b5635e9c-b9ee-822c-80d0-87b539f38970",
+          "description": "",
+          "name": "Projects",
+          "propertyUrl": "collectionProperty://b5635e9c-b9ee-822c-80d0-87b539f38970/S3FYbA",
+          "type": "relation"
+        },
+        "담당 Team": {
+          "dataSourceUrl": "collection://60235e9c-b9ee-824a-91d8-87a5c5615418",
+          "description": "",
+          "name": "담당 Team",
+          "propertyUrl": "collectionProperty://60235e9c-b9ee-824a-91d8-87a5c5615418/dWZAbg",
+          "type": "relation"
+        },
+        "소개": {
+          "description": "",
+          "name": "소개",
+          "type": "text"
+        }
+      },
+      "url": "collection://a3435e9c-b9ee-834f-acf9-07799e03fe65"
+    },
+    "Projects": {
+      "default_page_template": "https://app.notion.com/p/9e535e9cb9ee835d822101842dec40ec",
+      "icon": "/icons/target_gray.svg",
+      "name": "Projects",
+      "notAvailableInQuerySql": [
+        "진행률"
+      ],
+      "schema": {
+        "Client": {
+          "dataSourceUrl": "collection://a3435e9c-b9ee-834f-acf9-07799e03fe65",
+          "description": "",
+          "name": "Client",
+          "propertyUrl": "collectionProperty://a3435e9c-b9ee-834f-acf9-07799e03fe65/cTo6bw",
+          "type": "relation"
+        },
+        "Google Drive 파일": {
+          "dataSourceUrl": "collection://9a835e9c-b9ee-832e-9bb6-07ee61792500",
+          "description": "",
+          "name": "Google Drive 파일",
+          "propertyUrl": "collectionProperty://9a835e9c-b9ee-832e-9bb6-07ee61792500/WmhJVA",
+          "type": "relation"
+        },
+        "Meetings": {
+          "dataSourceUrl": "collection://3f835e9c-b9ee-806b-9917-000b44f5b9a7",
+          "description": "",
+          "name": "Meetings",
+          "propertyUrl": "collectionProperty://3f835e9c-b9ee-806b-9917-000b44f5b9a7/WF09Uw",
+          "type": "relation"
+        },
+        "Notes": {
+          "dataSourceUrl": "collection://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18",
+          "description": "",
+          "name": "Notes",
+          "propertyUrl": "collectionProperty://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18/Y351SA",
+          "type": "relation"
+        },
+        "Project": {
+          "description": "",
+          "name": "Project",
+          "type": "title"
+        },
+        "Tasks": {
+          "dataSourceUrl": "collection://55035e9c-b9ee-83bb-ae32-0796907899a3",
+          "description": "",
+          "name": "Tasks",
+          "propertyUrl": "collectionProperty://55035e9c-b9ee-83bb-ae32-0796907899a3/cXhyXw",
+          "type": "relation"
+        },
+        "기간": {
+          "description": "",
+          "name": "기간",
+          "querySqlColumns": {
+            "columns": [
+              {
+                "name": "date:기간:start",
+                "sqlType": "TEXT"
+              },
+              {
+                "name": "date:기간:end",
+                "sqlType": "TEXT"
+              },
+              {
+                "name": "date:기간:is_datetime",
+                "sqlType": "INTEGER"
+              }
+            ],
+            "usage": "For connections.notion.querySql. Main schema name not queryable."
+          },
+          "type": "date"
+        },
+        "담당자": {
+          "dataSourceUrl": "collection://60235e9c-b9ee-824a-91d8-87a5c5615418",
+          "description": "",
+          "name": "담당자",
+          "propertyUrl": "collectionProperty://60235e9c-b9ee-824a-91d8-87a5c5615418/XT5qcA",
+          "type": "relation"
+        },
+        "상태": {
+          "description": "",
+          "groups": {
+            "complete": [
+              {
+                "color": "yellow",
+                "description": "",
+                "name": "보류",
+                "url": "collectionPropertyOption://b5635e9c-b9ee-822c-80d0-87b539f38970/Vz9RRA/N2NmYzgzMDYtZjViMC00Zjk0LTkyY2ItZWRhMWM0YThmOWY0"
+              },
+              {
+                "color": "red",
+                "description": "",
+                "name": "중단",
+                "url": "collectionPropertyOption://b5635e9c-b9ee-822c-80d0-87b539f38970/Vz9RRA/Yzk4ZGZmM2ItYWI1Ni00NGZlLWI3ZDItOWJlMjNjMzFmNTNj"
+              },
+              {
+                "color": "green",
+                "description": "",
+                "name": "완료",
+                "url": "collectionPropertyOption://b5635e9c-b9ee-822c-80d0-87b539f38970/Vz9RRA/ZTYyYzUwMmUtNDZkZi00MzIzLTk3ZTUtZGQ5MGRjMzgyY2Zh"
+              }
+            ],
+            "current": [],
+            "future": [],
+            "in_progress": [
+              {
+                "color": "blue",
+                "description": "",
+                "name": "진행 중",
+                "url": "collectionPropertyOption://b5635e9c-b9ee-822c-80d0-87b539f38970/Vz9RRA/OWRlMWU2OGItNGVlZi00ZjFkLWE2ODItMDQ0OWQxNzBhYzE1"
+              },
+              {
+                "color": "orange",
+                "description": "",
+                "name": "협력사 확인 대기 중",
+                "url": "collectionPropertyOption://b5635e9c-b9ee-822c-80d0-87b539f38970/Vz9RRA/YTc4N2NiNDktNTE4Ni00ODcyLTgxNzQtY2E0ODJlYjYwMjVl"
+              },
+              {
+                "color": "purple",
+                "description": "",
+                "name": "위임",
+                "url": "collectionPropertyOption://b5635e9c-b9ee-822c-80d0-87b539f38970/Vz9RRA/YjdhY2YyZjYtYjE5MC00MzZiLWIxNTYtMTVkYzIyNjNmMjIw"
+              }
+            ],
+            "to_do": [
+              {
+                "color": "gray",
+                "description": "",
+                "name": "예정",
+                "url": "collectionPropertyOption://b5635e9c-b9ee-822c-80d0-87b539f38970/Vz9RRA/MTgzMzY2OWEtMDM3Ni00OTdhLTg3N2ItYjVkODA0OGZmNTAw"
+              }
+            ]
+          },
+          "name": "상태",
+          "type": "status"
+        },
+        "진행률": {
+          "aggregation": "percent_checked",
+          "description": "",
+          "name": "진행률",
+          "relationPropertyUrl": "collectionProperty://b5635e9c-b9ee-822c-80d0-87b539f38970/bEI9SQ",
+          "targetPropertyType": "formula",
+          "targetPropertyUrl": "collectionProperty://55035e9c-b9ee-83bb-ae32-0796907899a3/QWY8Xw",
+          "type": "rollup"
+        }
+      },
+      "url": "collection://b5635e9c-b9ee-822c-80d0-87b539f38970"
+    },
+    "Tasks": {
+      "default_page_template": "https://app.notion.com/p/a3635e9cb9ee83558c2d01122d953cff",
+      "icon": "/icons/checklist_gray.svg",
+      "name": "Tasks",
+      "notAvailableInQuerySql": [
+        "완료 여부"
+      ],
+      "schema": {
+        "Client": {
+          "dataSourceUrl": "collection://a3435e9c-b9ee-834f-acf9-07799e03fe65",
+          "description": "",
+          "name": "Client",
+          "type": "relation"
+        },
+        "Notes": {
+          "dataSourceUrl": "collection://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18",
+          "description": "",
+          "name": "Notes",
+          "propertyUrl": "collectionProperty://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18/VVBTZg",
+          "type": "relation"
+        },
+        "Project": {
+          "dataSourceUrl": "collection://b5635e9c-b9ee-822c-80d0-87b539f38970",
+          "description": "",
+          "name": "Project",
+          "propertyUrl": "collectionProperty://b5635e9c-b9ee-822c-80d0-87b539f38970/bEI9SQ",
+          "type": "relation"
+        },
+        "Task": {
+          "description": "",
+          "name": "Task",
+          "type": "title"
+        },
+        "담당자": {
+          "dataSourceUrl": "collection://60235e9c-b9ee-824a-91d8-87a5c5615418",
+          "description": "",
+          "name": "담당자",
+          "propertyUrl": "collectionProperty://60235e9c-b9ee-824a-91d8-87a5c5615418/UlJjTw",
+          "type": "relation"
+        },
+        "마감": {
+          "description": "",
+          "name": "마감",
+          "querySqlColumns": {
+            "columns": [
+              {
+                "name": "date:마감:start",
+                "sqlType": "TEXT"
+              },
+              {
+                "name": "date:마감:end",
+                "sqlType": "TEXT"
+              },
+              {
+                "name": "date:마감:is_datetime",
+                "sqlType": "INTEGER"
+              }
+            ],
+            "usage": "For connections.notion.querySql. Main schema name not queryable."
+          },
+          "type": "date"
+        },
+        "상위 항목": {
+          "dataSourceUrl": "collection://55035e9c-b9ee-83bb-ae32-0796907899a3",
+          "description": "",
+          "limit": 1,
+          "name": "상위 항목",
+          "propertyUrl": "collectionProperty://55035e9c-b9ee-83bb-ae32-0796907899a3/V1JVbw",
+          "type": "relation"
+        },
+        "상태": {
+          "description": "",
+          "groups": {
+            "complete": [
+              {
+                "color": "yellow",
+                "description": "",
+                "name": "보류",
+                "url": "collectionPropertyOption://55035e9c-b9ee-83bb-ae32-0796907899a3/REJzWg/MDMwNTRmMWYtZThjNy00NGE5LThkMzgtMjRmMGE4YWFjMDVl"
+              },
+              {
+                "color": "red",
+                "description": "",
+                "name": "중단",
+                "url": "collectionPropertyOption://55035e9c-b9ee-83bb-ae32-0796907899a3/REJzWg/M2YxYTk2NjUtOTU2NC00MTI0LThhYWMtYTI4M2Q5ZjRiOWU5"
+              },
+              {
+                "color": "green",
+                "description": "",
+                "name": "완료",
+                "url": "collectionPropertyOption://55035e9c-b9ee-83bb-ae32-0796907899a3/REJzWg/NWZiZmZkOWYtNDc2ZS00ODRiLThkNDUtNTNlM2ZhZjgwOTYy"
+              }
+            ],
+            "current": [],
+            "future": [],
+            "in_progress": [
+              {
+                "color": "purple",
+                "description": "",
+                "name": "위임",
+                "url": "collectionPropertyOption://55035e9c-b9ee-83bb-ae32-0796907899a3/REJzWg/YmEzMjQxMmItZTQ5ZC00MGY5LWEzODctYzkzZjA2MTUyNDE0"
+              },
+              {
+                "color": "blue",
+                "description": "",
+                "name": "진행 중",
+                "url": "collectionPropertyOption://55035e9c-b9ee-83bb-ae32-0796907899a3/REJzWg/YjE2OWNjZjctMTBiOC00ZGYyLTg4NmMtODk2ZjRkOGE4OWQw"
+              },
+              {
+                "color": "orange",
+                "description": "",
+                "name": "확인 대기중",
+                "url": "collectionPropertyOption://55035e9c-b9ee-83bb-ae32-0796907899a3/REJzWg/YzEzMzJiYzQtNjVhMS00M2Q5LWJkNTktMzQ4NGFjMzM3NTVl"
+              }
+            ],
+            "to_do": [
+              {
+                "color": "gray",
+                "description": "",
+                "name": "예정",
+                "url": "collectionPropertyOption://55035e9c-b9ee-83bb-ae32-0796907899a3/REJzWg/MjJmN2NjZGYtNjcwZC00NTUxLWJiYmEtZjdlYzc4YjFlMDYz"
+              }
+            ]
+          },
+          "name": "상태",
+          "type": "status"
+        },
+        "완료 여부": {
+          "codeUrl": "formulaCode://55035e9c-b9ee-83bb-ae32-0796907899a3/QWY8Xw",
+          "description": "",
+          "name": "완료 여부",
+          "type": "formula"
+        },
+        "우선순위": {
+          "description": "",
+          "name": "우선순위",
+          "options": [
+            {
+              "color": "red",
+              "description": "",
+              "name": "높음",
+              "url": "collectionPropertyOption://55035e9c-b9ee-83bb-ae32-0796907899a3/X0prPw/ZDc2NGI3ZmItNjE3ZC00ZTI3LTk3YzgtMzQ4ZGIzZjRjZjY3"
+            },
+            {
+              "color": "gray",
+              "description": "",
+              "name": "보통",
+              "url": "collectionPropertyOption://55035e9c-b9ee-83bb-ae32-0796907899a3/X0prPw/NGI3NDA5MTYtMGJhMS00NGJjLTk3YTEtMWE5NWJjY2Q1YTA1"
+            }
+          ],
+          "type": "select"
+        },
+        "하위 항목": {
+          "dataSourceUrl": "collection://55035e9c-b9ee-83bb-ae32-0796907899a3",
+          "description": "",
+          "name": "하위 항목",
+          "propertyUrl": "collectionProperty://55035e9c-b9ee-83bb-ae32-0796907899a3/WWRIUA",
+          "type": "relation"
+        }
+      },
+      "url": "collection://55035e9c-b9ee-83bb-ae32-0796907899a3"
+    },
+    "Notes": {
+      "default_page_template": "https://app.notion.com/p/6bf35e9cb9ee838b9f1f018b805c720e",
+      "icon": "/icons/pencil_gray.svg",
+      "name": "Notes",
+      "schema": {
+        "Client": {
+          "dataSourceUrl": "collection://a3435e9c-b9ee-834f-acf9-07799e03fe65",
+          "description": "",
+          "name": "Client",
+          "propertyUrl": "collectionProperty://a3435e9c-b9ee-834f-acf9-07799e03fe65/TFd8aw",
+          "type": "relation"
+        },
+        "Favorite": {
+          "description": "",
+          "name": "Favorite",
+          "type": "checkbox"
+        },
+        "Note": {
+          "description": "",
+          "name": "Note",
+          "type": "title"
+        },
+        "Project": {
+          "dataSourceUrl": "collection://b5635e9c-b9ee-822c-80d0-87b539f38970",
+          "description": "",
+          "name": "Project",
+          "propertyUrl": "collectionProperty://b5635e9c-b9ee-822c-80d0-87b539f38970/Pm5KQQ",
+          "type": "relation"
+        },
+        "Tasks": {
+          "dataSourceUrl": "collection://55035e9c-b9ee-83bb-ae32-0796907899a3",
+          "description": "",
+          "name": "Tasks",
+          "propertyUrl": "collectionProperty://55035e9c-b9ee-83bb-ae32-0796907899a3/OkBLeg",
+          "type": "relation"
+        },
+        "기록 유형": {
+          "description": "",
+          "name": "기록 유형",
+          "options": [
+            {
+              "color": "blue",
+              "description": "",
+              "name": "회의",
+              "url": "collectionPropertyOption://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18/a3FQYA/M2Y0NTdhNjMtZTM2Mi00MDk2LTk4ZDQtODAxOTk2MTAzMmMw"
+            },
+            {
+              "color": "gray",
+              "description": "",
+              "name": "업무 기록",
+              "url": "collectionPropertyOption://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18/a3FQYA/N2JmYjQyMmYtYWQwNi00MjQ3LWFhNTUtNmJiZDMyNGQ5YTk2"
+            },
+            {
+              "color": "purple",
+              "description": "",
+              "name": "참고 자료",
+              "url": "collectionPropertyOption://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18/a3FQYA/ZDA0YmMwMTItZDAxYS00NjQ3LWJjMDQtZjQ3ZDFjNGM5ZDM4"
+            },
+            {
+              "color": "yellow",
+              "description": "",
+              "name": "이메일",
+              "url": "collectionPropertyOption://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18/a3FQYA/YzJiZDFjM2ItYjNiNi00ZTA2LTk2YjItZWFjOGY0NmU2OGZk"
+            },
+            {
+              "color": "green",
+              "description": "",
+              "name": "통화",
+              "url": "collectionPropertyOption://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18/a3FQYA/ZjY0MzVkNzYtN2JjYS00MjRkLTk5MDctMTEyOWUyZTE2MDRj"
+            },
+            {
+              "color": "pink",
+              "description": "",
+              "name": "메신저",
+              "url": "collectionPropertyOption://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18/a3FQYA/YjMxM2E1MmItYWQ5MC00NjhkLWJhNjctMWZhZjNkZmI4OGE3"
+            },
+            {
+              "color": "brown",
+              "description": "",
+              "name": "구두 대화",
+              "url": "collectionPropertyOption://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18/a3FQYA/NGNiOTM0YTktYzkxNy00NGNmLTkxMTYtOGM4YmI0MTJlNTcy"
+            }
+          ],
+          "type": "select"
+        },
+        "날짜": {
+          "description": "",
+          "name": "날짜",
+          "querySqlColumns": {
+            "columns": [
+              {
+                "name": "date:날짜:start",
+                "sqlType": "TEXT"
+              },
+              {
+                "name": "date:날짜:end",
+                "sqlType": "TEXT"
+              },
+              {
+                "name": "date:날짜:is_datetime",
+                "sqlType": "INTEGER"
+              }
+            ],
+            "usage": "For connections.notion.querySql. Main schema name not queryable."
+          },
+          "type": "date"
+        },
+        "원본": {
+          "description": "",
+          "name": "원본",
+          "type": "url"
+        },
+        "원본 상태": {
+          "description": "",
+          "name": "원본 상태",
+          "type": "text"
+        }
+      },
+      "url": "collection://64a35e9c-b9ee-82dc-8ca1-073d22fa6d18"
+    }
+  }
+}

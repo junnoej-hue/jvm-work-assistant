@@ -1,0 +1,7 @@
+# JvM work assistant
+
+설치 요청은 README.md와 docs/SETUP.md를 읽고 진행하세요. 사용자에게 비밀번호·토큰을 채팅에 붙여넣게 하지 마세요. 이 저장소에 실제 업무 자료를 저장하지 마세요.
+
+회사 업무 요청에는 skills/jvm-workflow/SKILL.md를 읽거나 `jvm_workflow_guide`를 호출하세요. 전체 스키마/모든 메일/모든 채팅을 매번 읽지 마세요. 실제 결과를 검증하고 준비·저장·전달·완료 상태를 구분하세요.
+
+개발 시: synthetic tests와 MCP smoke를 실행하세요. 라이브 계정·기존 개인 브리지의 인증값을 테스트/배포물에 복사하지 마세요.
