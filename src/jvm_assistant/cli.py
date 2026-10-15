@@ -7,7 +7,7 @@ import re
 import ssl
 import sys
 from .common import ROOT, UserError, load_config, save_config, state_dir
-from . import keychain, webex, mail, hub
+from . import keychain, webex, mail, hub, records
 
 
 def interactive():
@@ -78,7 +78,7 @@ def setup_webex():
 
 
 def doctor(live=False):
-    result={'version':'0.1.0','python':sys.version.split()[0],'platform':sys.platform,'hub_schema':hub.contract()['verification'],
+    result={'version':'0.2.0','python':sys.version.split()[0],'platform':sys.platform,'hub_schema':hub.contract()['verification'],
             'notion':'공식 Notion 커넥터에서 회사 Hub를 별도로 읽어 검증해야 합니다.',
             'zimbra':'not_configured','webex':'not_configured','allowed_room_count':len(load_config().get('webex_rooms',[])),
             'live_checks_requested':live}
@@ -125,6 +125,7 @@ def main(argv=None):
     check=sub.add_parser('doctor');check.add_argument('--live',action='store_true')
     config=sub.add_parser('config');config.add_argument('client',choices=['codex','claude'])
     sub.add_parser('hub')
+    workspace=sub.add_parser('workspace');workspace.add_argument('path',help='Private local work folder outside Git')
     forget=sub.add_parser('disconnect');forget.add_argument('service',choices=['zimbra','webex'])
     args=parser.parse_args(argv)
     try:
@@ -132,6 +133,10 @@ def main(argv=None):
         elif args.command=='doctor':return doctor(args.live)
         elif args.command=='config':client_config(args.client)
         elif args.command=='hub':print(json.dumps(hub.contract(),ensure_ascii=False,indent=2))
+        elif args.command=='workspace':
+            path=records.validate_workspace(args.path)
+            settings=load_config();settings['workspace_dir']=str(path);save_config(settings)
+            print('Private work folder configured: '+str(path)+'; existing records were not moved.')
         elif args.command=='disconnect':
             interactive()
             if input(f'{args.service}의 이 패키지 연결만 제거할까요? [yes]: ').strip()!='yes':return 0

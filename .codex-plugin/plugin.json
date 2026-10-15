@@ -1,7 +1,7 @@
 {
   "name": "jvm-work-assistant",
-  "version": "0.1.0",
-  "description": "JvM company workflow with local read-only Zimbra and Webex tools and shared Notion Hub guidance.",
+  "version": "0.2.0",
+  "description": "JvM workflow with read-only company sources, private local work records, and shared Notion Hub guidance.",
   "author": {
     "name": "JvM team"
   },

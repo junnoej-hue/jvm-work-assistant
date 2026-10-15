@@ -1,5 +1,7 @@
 import importlib.util
 import json
+import tomllib
+from jvm_assistant import __version__
 import tempfile
 import unittest
 from pathlib import Path
@@ -30,6 +32,8 @@ class InstallTests(unittest.TestCase):
     def test_version_manifests(self):
         root=json.loads((ROOT/'plugin.json').read_text());compat=json.loads((ROOT/'.codex-plugin/plugin.json').read_text())
         self.assertEqual(root['name'],compat['name']);self.assertEqual(root['version'],compat['version'])
+        self.assertEqual(root['version'],__version__)
+        self.assertEqual(root['version'],tomllib.loads((ROOT/'pyproject.toml').read_text())['project']['version'])
         self.assertLessEqual(len(root['extensions']['com.openai']['interface']['shortDescription']),30)
         mcp=json.loads((ROOT/'mcp.json').read_text());self.assertEqual(mcp['mcpServers']['jvm-work-assistant']['args'],['${PLUGIN_ROOT}/scripts/run-mcp.sh'])
 

@@ -16,6 +16,16 @@ bash install.sh
 
 설치 폴더를 먼저 선택하고 경로에 공백이 있어도 따옴표로 처리합니다. `.venv`에 고정 버전 의존성을 설치합니다. 시스템 Python이나 기존 개인 JvM 브리지를 바꾸지 않습니다. Python이 없으면 python.org에서 지원 버전을 설치하거나 사용자의 기존 Python 경로를 `JVM_PYTHON`으로 지정하세요. 원격 스크립트를 curl로 받아 즉시 실행하지 않습니다.
 
+## 개인 작업 폴더
+
+배포용 설치 폴더에는 실제 업무 기록을 저장하지 않습니다. 기본 저장 위치는 각 사용자 본인의 `~/Documents/JvM Workspace/local/private-work-history/`입니다. 본인만 사용하는 작업 폴더를 이미 정했다면 설치 AI가 아래 명령의 경로를 그 폴더로 바꿉니다. 다른 사람의 경로나 팀 공유/클라우드 공유 폴더를 지정하지 마세요.
+
+```sh
+.venv/bin/jvm-assistant workspace "$HOME/Documents/JvM Workspace"
+```
+
+이 설정은 앞으로의 저장 위치만 정하며 기존 기록을 이동/삭제하지 않습니다. 개인 기록 도구는 Git 저장소·설치 폴더·심볼릭 링크 경로를 거부합니다. 팀원이 각자 자신의 AI에서 `jvm_workflow_guide`를 읽으면 동일한 저장 기준을 사용합니다. 서버에 공통 개인 기록을 모으는 방식이 아닙니다.
+
 ## 2. 사용하는 AI에 도구 등록
 
 사용 중인 AI 하나부터 등록합니다. 아래 명령은 패키지 폴더에서 실행합니다. 기존 설정 파일은 백업하고 이 MCP 항목만 추가합니다. 동일 이름의 다른 연결은 덮어쓰지 않습니다. **계정 인증정보가 없는 설정만** 추가됩니다.
@@ -69,7 +79,7 @@ AI가 사용자의 터미널에서 아래를 실행하도록 안내하거나 Fin
 
 ## 5. 본인 Webex 연결
 
-v0.1은 **사용자별 Webex Integration** 방식입니다. 본인 회사 계정으로 [Webex 개발자 포털](https://developer.webex.com/my-apps)에서 Integration을 만들거나 IT 담당자의 도움을 받습니다. 회사에서 승인을 요구하면 승인 후 진행합니다. 다른 사람의 Client Secret/Token을 공유하지 않습니다.
+현재는 **사용자별 Webex Integration** 방식입니다. 본인 회사 계정으로 [Webex 개발자 포털](https://developer.webex.com/my-apps)에서 Integration을 만들거나 IT 담당자의 도움을 받습니다. 회사에서 승인을 요구하면 승인 후 진행합니다. 다른 사람의 Client Secret/Token을 공유하지 않습니다.
 
 등록 항목:
 
@@ -100,7 +110,9 @@ AI 도구 목록 확인 뒤 작은 실무 요청으로 메일 한 스레드/허�
 ## 업데이트·제거
 
 - 업데이트: 설치 폴더의 `git status`를 확인하고 개인 자료가 없는 상태에서 `git pull --ff-only`, `bash install.sh`. 의존성/코드 변경 사항 확인 후 앱 재시작. 자동 업데이트 데몬 없음.
+- GitHub ZIP으로 설치했다면 새 ZIP을 별도 폴더에 내려받아 설치하고 MCP 실행 경로를 갱신합니다. 원본 설치 폴더를 덮어쓰거나 개인 작업 폴더를 삭제하지 않습니다.
 - 제거: 먼저 각 AI의 `jvm-work-assistant` MCP 항목만 제거. `disconnect zimbra`, `disconnect webex`를 본인 터미널에서 실행하면 이 패키지 전용 Keychain 항목만 지웁니다. Webex 서비스 측 승인도 계정에서 취소할 수 있습니다.
+- 개인 기록은 설치 폴더 밖에 남습니다. `workspace`로 설정한 위치를 먼저 확인하세요. 패키지/연결 제거 시 개인 기록은 삭제하지 않습니다.
 - 로컬 상태는 `~/Library/Application Support/JvMWorkAssistant`입니다. 제거 시 이 폴더와 설치 폴더만 대상이며 기존 JvMBridge/WebexCollector/JvMAEWorker에는 손대지 않습니다.
 
 ## 공식 참고

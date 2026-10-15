@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jvm-work-assistant"
-version = "0.1.0"
+version = "0.2.0"
 description = "Local, per-user read-only Zimbra/Webex tools for JvM work"
 requires-python = ">=3.11"
 dependencies = ["mcp==1.30.0"]
